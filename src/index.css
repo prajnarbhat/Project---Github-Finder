@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+    --font-size-xl: 24px;
+    --font-family: "Arial, sans-serif";
+}
+
+body {
+    font-size: var(--font-size-medium);
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: white;
+}
+
+.navbar-component {
+    background-color: #dd8181;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-large);
+}
+
+.navbar-component  h3, ul {
+    margin: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10px 0 10px; 
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.container h3 {
+    font-size: var(--font-size-large);
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    width: 200px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    margin-bottom: 10px;
+}
+
+.user-intro {
+    padding: 10px;
+}
+
+.username {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.btn {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
