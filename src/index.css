@@ -124,7 +124,7 @@ ul li {
     flex-direction: column;
 }
 
-.search-form input{
+.search-form input {
     width: 400px;
     height: 10px;
     padding: 10px;
@@ -148,6 +148,8 @@ ul li {
     transition: transform 0.2s ease-in-out;
     align-items: center;  
     border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+    color: black;
 }
 
 .button-search:hover {
@@ -182,8 +184,7 @@ ul li {
     justify-content: flex-start;
     gap: 50px;
     padding: 20px;
-    align-items: canter;
-    
+    align-items: canter;    
 }
 
 .user-btn {
@@ -208,6 +209,7 @@ ul li {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .intro-page {
@@ -220,6 +222,7 @@ ul li {
     flex-direction: column;
     justify-content: space-around;
     width: 500px;
+    overflow: hidden;
 }
 
 .followers-page {
@@ -232,11 +235,15 @@ ul li {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     
 }
 
 .repo-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust columns dynamically */
+    gap: 40px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    padding: 10px;
+  }

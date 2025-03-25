@@ -30,7 +30,7 @@ const UserDetail = () => {
         <>  
             <div class="user-container">
             <div class="user-page">
-            <Link to="/" className="button-search">Back to Search</Link>
+            <Link to="/" className="button-search" style={{width: "200px"}}>Back to Search</Link>
             <p>Hirable: {userDetail.hireable ? <i className="fa fa-check correct"></i> : <i className="fas fa-times incorrect"></i>}</p>
             </div>
             <div className="card-detail">
@@ -62,8 +62,9 @@ const UserDetail = () => {
                     <div className="block">Public Gists: {userDetail.public_gists ?? "N/A"}</div>
                 </div>
                 <br></br>
+                <p className="username"> Repositories:</p>
                 <div className="repo-details">
-                    <p className="username"> Repositories:</p>
+                    
                     <RepoDetails repos={{anything}}/>
 
                 </div>

@@ -9,9 +9,9 @@ const UserRepo =(props) => {
     return (
         <div className="repo-details">
             {arrayOfRepos.map((repo, index) => (
-                <div key={index}>
+                <p key={index}>
                     <RepoLink repo={repo}/>
-                </div>
+                </p>
             ))}
         </div>
     )
