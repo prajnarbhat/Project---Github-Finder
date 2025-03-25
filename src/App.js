@@ -46,7 +46,7 @@ function App() {
                     <Routes>   
                         <Route exact path="/" element = {
                                 <>
-                                    <Search searchData = {searchData} showClear={showClear} clearUser={clearUser}/>
+                                    <Search searchData = {searchData} showClear={showClear} clearUser={clearUser} users = {users}/>
                                     <User users = {users}/>
                                 </>
                             
