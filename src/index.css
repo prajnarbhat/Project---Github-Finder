@@ -150,6 +150,7 @@ ul li {
     border: 1px solid rgba(0, 0, 0, 0.2);
     width: 100%;
     color: black;
+    overflow: hidden;
 }
 
 .button-search:hover {
