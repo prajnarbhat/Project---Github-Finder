@@ -7,12 +7,15 @@ const Search = (props) => {
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        props.searchData(text)
-        console.log(props)
-        // It will call the component searchData
-        setText("")
-
-        
+        if(text.lenth > 0) {
+          props.searchData(text)
+          console.log(props)
+          // It will call the component searchData
+          setText("") 
+        }
+        else {
+          alert("Please enter something.");
+        }
       }
       return (
         <>

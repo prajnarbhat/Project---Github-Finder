@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import RepoDetails from "./RepoDetails";
 
 const UserDetail = () => {
     const { anything } = useParams();  // Get the username from the URL
@@ -59,6 +60,12 @@ const UserDetail = () => {
                     <div className="button-search">Following: {userDetail.following ?? "N/A"}</div>
                     <div className="button-search">Public Repos: {userDetail.public_repos ?? "N/A"}</div>
                     <div className="button-search">Public Gists: {userDetail.public_gists ?? "N/A"}</div>
+                </div>
+                <br></br>
+                <div className="repo-details">
+                    <p className="username"> Repositories:</p>
+                    <RepoDetails repos={{anything}}/>
+
                 </div>
             </div>
         </>

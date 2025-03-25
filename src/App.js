@@ -14,7 +14,6 @@ function App() {
     const [ showClear, setClear] = useState(false)
     useEffect(async() => {
         const response = await axios.get('https://api.github.com/users')
-        console.log("Response data of user:",response.data)
         setUsers(response.data)
     },[])
     // useEffect to render the data

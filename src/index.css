@@ -217,3 +217,21 @@ ul li {
     border: 1px solid rgba(0, 0, 0, 0.2);
     
 }
+
+.repo-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.repo {
+    font-size: var(--font-size-medium);
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
