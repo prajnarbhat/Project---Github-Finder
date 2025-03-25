@@ -47,7 +47,7 @@ const UserDetail = () => {
                          {userDetail.bio && <p><strong>Bio:</strong> {userDetail.bio} </p>}
                     </div>
                     <br></br>
-                    <a href={userDetail.html_url} target="_blank" style={{width:"200px"}} className="button-search">
+                    <a href={userDetail.html_url}  style={{width:"200px"}} className="button-search">
                         Visit GitHub Profile
                     </a>
                     <br></br>

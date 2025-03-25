@@ -12,9 +12,13 @@ function App() {
     // use useState to display data fetched
     const [ users, setUsers] = useState([])
     const [ showClear, setClear] = useState(false)
-    useEffect(async() => {
+    useEffect(() => {
+        const fetchData = async() => {
         const response = await axios.get('https://api.github.com/users')
         setUsers(response.data)
+      }
+      fetchData();
+
     },[])
     // useEffect to render the data
 
