@@ -4,9 +4,9 @@ const RepoLink = (props) => {
     const Individualreponame = props.repo.name;
     return (
         <div className="repo">
-            <h3>
-                <a href={props.repo.html_url}> {Individualreponame} </a>
-            </h3>
+            <p>
+                <a className="button-search" href={props.repo.html_url}> {Individualreponame} </a>
+            </p>
         </div>
     )
 }

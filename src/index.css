@@ -101,7 +101,9 @@ ul li {
     border-radius: 5px;
     display: inline-block;
     margin-top: 10px;
-    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    align-items: center;  
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -115,7 +117,6 @@ ul li {
     justify-content: space-around;
     align-items: center;
     gap: 20px;
-    margin: 20px;
 }
 
 .search-form form {
@@ -136,6 +137,7 @@ ul li {
 
 .button-search {
     display: flex;
+    text-decoration: none;
     justify-content: center;
     height: 30px;
     padding: 10px;
@@ -150,6 +152,21 @@ ul li {
 
 .button-search:hover {
     background: #6ca1da;
+}
+
+.block {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    align-items: center;  
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .user-container {
@@ -222,16 +239,4 @@ ul li {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
-}
-
-.repo {
-    font-size: var(--font-size-medium);
-    align-items: center;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    text-decoration: none;
 }

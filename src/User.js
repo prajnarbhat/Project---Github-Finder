@@ -20,7 +20,7 @@ const containerStyle = {
     justifyContent: "center",  
     alignItems: "center",       
     padding: "20px",
-    marginTop: "50px"        
+    marginTop: "30px"        
 };
 
 const userStyle = {

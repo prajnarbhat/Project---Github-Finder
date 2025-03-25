@@ -7,7 +7,7 @@ const Search = (props) => {
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        if(text.lenth > 0) {
+        if(text.length > 0) {
           props.searchData(text)
           console.log(props)
           // It will call the component searchData

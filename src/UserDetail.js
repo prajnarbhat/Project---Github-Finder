@@ -56,10 +56,10 @@ const UserDetail = () => {
                </div>
                <br></br>
                 <div class="followers-page">
-                    <div className="button-search">Followers: {userDetail.followers ?? "N/A"}</div>
-                    <div className="button-search">Following: {userDetail.following ?? "N/A"}</div>
-                    <div className="button-search">Public Repos: {userDetail.public_repos ?? "N/A"}</div>
-                    <div className="button-search">Public Gists: {userDetail.public_gists ?? "N/A"}</div>
+                    <div className="block">Followers: {userDetail.followers ?? "N/A"}</div>
+                    <div className="block">Following: {userDetail.following ?? "N/A"}</div>
+                    <div className="block">Public Repos: {userDetail.public_repos ?? "N/A"}</div>
+                    <div className="block">Public Gists: {userDetail.public_gists ?? "N/A"}</div>
                 </div>
                 <br></br>
                 <div className="repo-details">
