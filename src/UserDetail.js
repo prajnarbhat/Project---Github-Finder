@@ -39,18 +39,18 @@ const UserDetail = () => {
                         alt="Avatar"
                     />
                     <p className="username"> <strong>Username: {userDetail.login} </strong></p>
-                    <p>Location: {userDetail.location ?? "Not Available"}</p>
+                     {userDetail.location && <p>Location: {userDetail.location} </p>} 
                 </div>
                 <div className="detail-page">
                     <div>
-                        <p><strong>Bio:</strong> {userDetail.bio || "Not Available"}</p>
+                         {userDetail.bio && <p><strong>Bio:</strong> {userDetail.bio} </p>}
                     </div>
                     <br></br>
                     <a href={userDetail.html_url} target="_blank" style={{width:"200px"}} className="button-search">
                         Visit GitHub Profile
                     </a>
                     <br></br>
-                    <p><strong>Company:</strong> {userDetail.company || "Not Available"}</p>
+                     {userDetail.company && <p><strong>Company:</strong> {userDetail.company} </p>}
                 </div>
                </div>
                <br></br>

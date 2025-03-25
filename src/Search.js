@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const Search = (props) => {
+    console.log("Props in search data:", props);
       
       const [ text, setText] = useState("");
 

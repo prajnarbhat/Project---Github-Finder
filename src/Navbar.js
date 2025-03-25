@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Navbar is a functional component
 const  Navbar = () => {
+    // The return statement returns JSX
     return (
         <>
             <nav className="navbar-component pg-primary">
