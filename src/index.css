@@ -151,6 +151,7 @@ ul li {
     width: 100%;
     color: black;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .button-search:hover {
