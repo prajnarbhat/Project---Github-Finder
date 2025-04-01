@@ -15,7 +15,7 @@ function App() {
     useEffect(() => {
         const fetchData = async() => {
         const response = await axios.get('https://api.github.com/users')
-        setUsers(response.data)
+        setUsers(response.data.slice(0, 6))
       }
       fetchData();
 
@@ -28,13 +28,6 @@ function App() {
         setUsers(response.data.items)
         setClear(true)    
     }
-
-    const clearUser = () => {
-        setUsers([])
-        setClear(false) 
-    }
-    // So we need to props when user goes to /
-    // render is a function it will take props as arguments and return the components need to be rendered 
     
 
     return (       
@@ -46,7 +39,7 @@ function App() {
                     <Routes>   
                         <Route exact path="/" element = {
                                 <>
-                                    <Search searchData = {searchData} showClear={showClear} clearUser={clearUser} users = {users}/>
+                                    <Search searchData = {searchData} showClear={showClear} users = {users}/>
                                     <User users = {users}/>
                                 </>
                             

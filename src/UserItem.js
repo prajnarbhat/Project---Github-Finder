@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 const UserItem = (props) => {
     // console.log("Props data inside userItem:", props);
     // console.log("Gives an object data:",props.user);
@@ -11,8 +10,7 @@ const UserItem = (props) => {
         <div className="card">
             <img src={avatar_url} alt="Avatar" className="avatar"/>
             <div className="user-intro">
-            <h3 className="username"> {login} </h3>
-            <Link to={`/users/${login}`} className="btn">More</Link>
+            <span className="username"> {login} </span>
             </div>
       </div>
     )

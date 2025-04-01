@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import UserItem from "./UserItem";
 
 const User = (props) => {
@@ -8,7 +9,9 @@ const User = (props) => {
         <div style={containerStyle}>
         <div style = {userStyle}>
             {arrayOfUserData.map((user,index) => (
+                <Link to={`/users/${user.login}`} style={{ textDecoration: "none" }}>
                 <div key={index}> <UserItem user = {user}/> </div>
+                </Link>
             ))}
         </div>
         </div>

@@ -67,6 +67,7 @@ ul li {
     transition: transform 0.2s ease-in-out;
     width: 300px;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 .card:hover {
@@ -92,6 +93,7 @@ ul li {
     margin-bottom: 10px;
     color: #333;
     font-size: var(--font-size-large);
+    text-decoration: none;
 }
 
 .btn {
@@ -113,25 +115,24 @@ ul li {
 
 .search-form {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    
 }
 
 .search-form form {
     display: flex;
-    flex-direction: column;
 }
 
-.search-form input {
-    width: 400px;
-    height: 10px;
+.search-form input[type=search] {
+    width: 250px;
+    height: 35px;
     padding: 10px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    border: 1px solid grey;
     
 } 
 
@@ -139,7 +140,7 @@ ul li {
     display: flex;
     text-decoration: none;
     justify-content: center;
-    height: 30px;
+    height: 35px;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -148,7 +149,7 @@ ul li {
     transition: transform 0.2s ease-in-out;
     align-items: center;  
     border: 1px solid rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 50px;
     color: black;
     overflow: hidden;
     cursor: pointer;

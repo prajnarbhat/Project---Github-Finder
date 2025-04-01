@@ -19,11 +19,10 @@ const Search = (props) => {
         <>
           <div className="search-form">
            <form  onSubmit={handleSubmit}>
-              <input type="text" placeholder="Enter github username" value={text} onChange={(e) => setText(e.target.value)}/>
+              <input type="search" placeholder="Enter github username" value={text} onChange={(e) => setText(e.target.value)} />
               <br></br>
-              <button type="submit"  className="button-search">Search</button>              
+              <button type="submit"  className="button-search"> <i class="fa fa-search"></i></button>              
            </form>
-           {props.showClear && <button type="submit" className="button-search" style={{width: "66vh"}} onClick={props.clearUser}>Clear</button>}
           </div>
         </>
       )
