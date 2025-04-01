@@ -309,11 +309,13 @@ ul li {
   .pagination > span .previous {
     background-color: #f1f1f1;
     color: black;
+    border: none
   }
   
-  .pagination > span .next:hover{
-    background: #b7c5d3;
-    color: white;
+  .pagination > span .next{
+    background-color: #f1f1;
+    color: black;
+    border: none
   }
 
   .pagination-selected {

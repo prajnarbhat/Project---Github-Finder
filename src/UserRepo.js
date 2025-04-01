@@ -31,7 +31,9 @@ const UserRepo = (props) => {
                         className={page > 1 ? "" : "pagination_disabled"} 
                         onClick={() => selectPageHandler(page - 1)}
                     >
-                        <a  className="previous"> &laquo; Previous</a>
+                    <button className="previous">
+                        &laquo; Previous
+                    </button>
                     </span>
 
                     {[...Array(Math.ceil(arrayOfRepos.length / 4))].map((_dirname, i) => (
@@ -45,10 +47,10 @@ const UserRepo = (props) => {
                     ))}
 
                     <span 
-                        className={page < Math.ceil(arrayOfRepos.length / 4) ? "" : "pagination_disabled next"} 
+                        className={page < Math.ceil(arrayOfRepos.length / 4) ? "" : "pagination_disabled"} 
                         onClick={() => selectPageHandler(page + 1)}
                     >
-                        <a>Next &raquo;</a>
+                        <button className="next"> Next &raquo;</button>
                     </span>
                 </div>
             )}
