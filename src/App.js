@@ -24,7 +24,7 @@ function App() {
 
     const searchData = async(name) =>{
         const response = await axios.get(`https://api.github.com/search/users?q=${name}`)
-        console.log("Response data os searchuser:", response.data);
+
         setUsers(response.data.items)
         setClear(true)    
     }

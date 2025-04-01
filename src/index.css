@@ -249,3 +249,23 @@ ul li {
     box-sizing: border-box;
     padding: 10px;
   }
+
+  .pagination {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .pagination > span {
+    padding: 15px;
+    border: 1px solid gray
+}
+
+.pagination-selected {
+    background-color: #6ca1da;
+}
+
+.pagination_disabled {
+    opacity: 0;
+}

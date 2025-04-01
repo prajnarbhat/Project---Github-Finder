@@ -2,7 +2,6 @@ import React from "react";
 import UserItem from "./UserItem";
 
 const User = (props) => {
-    console.log("User props data:",props)
     const arrayOfUserData = props.users;
     
     return (

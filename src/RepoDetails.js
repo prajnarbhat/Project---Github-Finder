@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import UserRepo from "./UserRepo";
 
 const RepoDetails = (props) => {
-    console.log("Repo props is:", props.repos);
     // here we get the login name
     const loginname = props.repos.anything;
     const [ repos, setRepos ] = useState("")
@@ -11,7 +10,7 @@ const RepoDetails = (props) => {
     useEffect(() => {
         const fetchRepoDetails = async() => {
             try {
-                const response = await axios.get(`https://api.github.com/users/${loginname}/repos?per-page=2&sort=asc`)
+                const response = await axios.get(`https://api.github.com/users/${loginname}/repos?per-page=5&sort=asc`)
                 const data = response.data;
                 setRepos(data);
             }
@@ -22,7 +21,6 @@ const RepoDetails = (props) => {
         fetchRepoDetails();
     },[loginname])
 
-    console.log("Data is:", repos)
 
     return (
         <>

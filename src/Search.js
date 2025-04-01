@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const Search = (props) => {
-    console.log("Props in search data:", props);
       
       const [ text, setText] = useState("");
 
@@ -9,7 +8,6 @@ const Search = (props) => {
         e.preventDefault();
         if(text.length > 0) {
           props.searchData(text)
-          console.log(props)
           // It will call the component searchData
           setText("") 
         }
