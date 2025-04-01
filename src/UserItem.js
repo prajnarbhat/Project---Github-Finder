@@ -7,7 +7,7 @@ const UserItem = (props) => {
     // object destructure pass the data to the object if the properties are similar
     const { login, avatar_url } = props.user
     return (
-        <div className="card">
+        <div className="card click-links">
             <img src={avatar_url} alt="Avatar" className="avatar"/>
             <div className="user-intro">
             <span className="username"> {login} </span>

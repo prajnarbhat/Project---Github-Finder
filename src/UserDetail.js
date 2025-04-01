@@ -28,40 +28,45 @@ const UserDetail = () => {
 
     return (
         <>  
-            <div class="user-container">
-            <div class="user-page">
-            <Link to="/" className="button-search" style={{width: "200px"}}>Back to Search</Link>
-            <p>Hirable: {userDetail.hireable ? <i className="fa fa-check correct"></i> : <i className="fas fa-times incorrect"></i>}</p>
+            <div className="user-container">
+            <div>
+                <Link to="/" className="back-button"> &#8249; Previous </Link>
             </div>
+            <br></br>
             <div className="card-detail">
-                <div class="intro-page">
+                <div className="intro-page">
                     <img className="avatar"
                         src={userDetail.avatar_url}
                         alt="Avatar"
                     />
                     <p className="username"> <strong>Username: {userDetail.login} </strong></p>
-                     {userDetail.location && <p>Location: {userDetail.location} </p>} 
+                    {userDetail.location && <p>Location: {userDetail.location} </p>} 
+                    <br></br>
+                   
                 </div>
                 <div className="detail-page">
+                    
                     <div>
                          {userDetail.bio && <p><strong>Bio:</strong> {userDetail.bio} </p>}
                     </div>
                     <br></br>
-                    <a href={userDetail.html_url}  style={{width:"200px"}} className="button-search">
+                    <a href={userDetail.html_url}>
                         Visit GitHub Profile
                     </a>
                     <br></br>
                      {userDetail.company && <p><strong>Company:</strong> {userDetail.company} </p>}
+                     <br></br>
+                <div className="followers-page">
+                    <div className="block"> <strong>Followers: </strong> {userDetail.followers ?? "N/A"}</div>
+                    <div className="block"> <strong>Following: </strong> {userDetail.following ?? "N/A"}</div>
+                    <div className="block"> <strong>Public Repos: </strong> {userDetail.public_repos ?? "N/A"}</div>
+                    <div className="block"> <strong>Public Gists: </strong> {userDetail.public_gists ?? "N/A"}</div>
+                </div>
+                <br></br>
                 </div>
                </div>
                <br></br>
-                <div class="followers-page">
-                    <div className="block">Followers: {userDetail.followers ?? "N/A"}</div>
-                    <div className="block">Following: {userDetail.following ?? "N/A"}</div>
-                    <div className="block">Public Repos: {userDetail.public_repos ?? "N/A"}</div>
-                    <div className="block">Public Gists: {userDetail.public_gists ?? "N/A"}</div>
-                </div>
-                <br></br>
+               
                 <p className="username"> Repositories:</p>
                 <div className="repo-details">
                     

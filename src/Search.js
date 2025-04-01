@@ -21,7 +21,7 @@ const Search = (props) => {
            <form  onSubmit={handleSubmit}>
               <input type="search" placeholder="Enter github username" value={text} onChange={(e) => setText(e.target.value)} />
               <br></br>
-              <button type="submit"  className="button-search"> <i class="fa fa-search"></i></button>              
+              <button type="submit"  className="button-search"> <i className="fa fa-search"></i></button>              
            </form>
           </div>
         </>
