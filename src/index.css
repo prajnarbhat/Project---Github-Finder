@@ -365,4 +365,13 @@ ul li {
         grid-template-columns: repeat(1, 1fr);
     }
     
+    .card {
+        width: 100%;
+    }
+
+    .pagination>span {
+        width: 100%;
+        padding: 0;
+    }
+
  }
