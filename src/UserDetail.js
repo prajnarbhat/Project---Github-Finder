@@ -39,8 +39,8 @@ const UserDetail = () => {
                         src={userDetail.avatar_url}
                         alt="Avatar"
                     />
-                    <p className="username"> <strong>Username: {userDetail.login} </strong></p>
-                    {userDetail.location && <p>Location: {userDetail.location} </p>} 
+                    <p> <strong>Username: </strong>{userDetail.login} </p>
+                    {userDetail.location && <p> <strong>Location: </strong>{userDetail.location} </p>} 
                     <br></br>
                    
                 </div>
