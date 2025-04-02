@@ -345,18 +345,16 @@ ul li {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
 
     .block {
         width: 100%;
+        padding: 10px;
     }
 
     .pagination {
         margin: auto;
-    }
-
-    .container-style {
-        width: 100%;    
     }
 
     .user-style {
@@ -365,15 +363,7 @@ ul li {
         grid-template-columns: repeat(1, 1fr);
     }
     
-    .card {
-        width: 100%;
-    }
-
     .pagination>span {
-        width: 100%;
-    }
-
-    .container {
         width: 100%;
     }
 
