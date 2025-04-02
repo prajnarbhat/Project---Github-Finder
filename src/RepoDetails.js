@@ -4,7 +4,7 @@ import UserRepo from "./UserRepo";
 
 const RepoDetails = (props) => {
     // here we get the login name
-    const loginname = props.repos.anything;
+    const loginname = props.repos.username;
     const [ repos, setRepos ] = useState("")
 
     useEffect(() => {

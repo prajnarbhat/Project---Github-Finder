@@ -4,14 +4,14 @@ import { Link, useParams } from "react-router-dom";
 import RepoDetails from "./RepoDetails";
 
 const UserDetail = () => {
-    const { anything } = useParams();  // Get the username from the URL
+    const { username } = useParams();  // Get the username from the URL
     const [userDetail, setUserDetail] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await axios.get(`https://api.github.com/users/${anything}`);
+                const response = await axios.get(`https://api.github.com/users/${username}`);
                 setUserDetail(response.data);
                 setLoading(false);
             } catch (error) {
@@ -21,7 +21,7 @@ const UserDetail = () => {
         };
 
         fetchUser();
-    }, [anything]);
+    }, [username]);
 
     if (loading) return <h3>Loading user details...</h3>;
     if (!userDetail) return <h3>User not found</h3>;
@@ -70,7 +70,7 @@ const UserDetail = () => {
                 <p className="username"> Repositories:</p>
                 <div className="repo-details">
                     
-                    <RepoDetails repos={{anything}}/>
+                    <RepoDetails repos={{username}}/>
 
                 </div>
             </div>

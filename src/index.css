@@ -309,13 +309,15 @@ ul li {
   .pagination > span .previous {
     background-color: #f1f1f1;
     color: black;
-    border: none
+    border: none;
+    width: 70px;
   }
   
   .pagination > span .next{
     background-color: #f1f1;
     color: black;
-    border: none
+    border: none;
+    width: 70px;
   }
 
   .pagination-selected {

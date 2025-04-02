@@ -46,7 +46,7 @@ function App() {
                         }/>  
                         
                         <Route exact path="/about" element={<About />} />
-                        <Route exact path="/users/:anything" element={<UserDetail/>} /> 
+                        <Route exact path="/users/:username" element={<UserDetail/>} /> 
                     </Routes>
                 </div>
             </Router>
