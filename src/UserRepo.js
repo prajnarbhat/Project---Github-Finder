@@ -3,7 +3,6 @@ import RepoLink from "./RepoLink";
 
 const UserRepo = (props) => {
     const arrayOfRepos = props.userrepo; 
-    console.log("Individual repo details:", arrayOfRepos);
 
     const [page, setPage] = useState(1);
 
