@@ -6,8 +6,8 @@ const User = (props) => {
     const arrayOfUserData = props.users;
     
     return (
-        <div style={containerStyle}>
-        <div style = {userStyle}>
+        <div style={containerStyle} className="container-style">
+        <div className="user-style">
             {arrayOfUserData.map((user,index) => (
                 <Link to={`/users/${user.login}`} style={{ textDecoration: "none" }}>
                 <div key={index}> <UserItem user = {user}/> </div>
@@ -25,10 +25,6 @@ const containerStyle = {
     marginTop: "30px"        
 };
 
-const userStyle = {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "20px",   
-    width: "100%",
-};
+
+
 export default User;

@@ -329,3 +329,40 @@ ul li {
  .click-links:hover {
     background: #b7c5d3;
  }
+
+ .user-style {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px; 
+ }
+
+ @media (max-width: 600px) {
+    .user-container {
+        width: 100%;
+    }
+    .followers-page {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block {
+        width: 100%;
+    }
+
+    .pagination {
+        margin: auto;
+    }
+
+    .container-style {
+        width: 100%;    
+    }
+
+    .user-style {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+ }

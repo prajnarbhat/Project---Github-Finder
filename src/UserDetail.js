@@ -30,7 +30,7 @@ const UserDetail = () => {
         <>  
             <div className="user-container">
             <div>
-                <Link to="/" className="back-button"> &#8249; Previous </Link>
+                <Link to="/" className="back-button"> &#8249; Back to search </Link>
             </div>
             <br></br>
             <div className="card-detail">
