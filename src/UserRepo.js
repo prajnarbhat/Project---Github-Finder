@@ -1,13 +1,13 @@
-import { useState } from "react";
 import RepoLink from "./RepoLink";
 
 const UserRepo = (props) => {
     const arrayOfRepos = props.userrepo; 
-
-    const [page, setPage] = useState(1);
+    const page = props.page;
+    const setPage = props.setPage;
+    const totalPages = props.totalPages;
 
     const selectPageHandler = (selectedPage) => {
-        if (selectedPage >= 1 && selectedPage <= Math.ceil(arrayOfRepos.length / 4) && selectedPage !== page) {
+        if (selectedPage >= 1 && selectedPage <= totalPages) {
             setPage(selectedPage);
         }
     };
@@ -16,7 +16,7 @@ const UserRepo = (props) => {
         <>
             {arrayOfRepos.length > 0 && (
                 <div className="repo-detail">
-                    {arrayOfRepos.slice((page * 4) - 4, page * 4).map((repo, index) => (
+                    {arrayOfRepos.map((repo, index) => (
                         <p key={index}>
                             <RepoLink repo={repo} />
                         </p>
@@ -30,12 +30,11 @@ const UserRepo = (props) => {
                         className={page > 1 ? "" : "pagination_disabled"} 
                         onClick={() => selectPageHandler(page - 1)}
                     >
-                    <button className="previous">
-                        &laquo; Previous
-                    </button>
+                        <button className="previous">&laquo; Previous</button>
                     </span>
 
-                    {[...Array(Math.ceil(arrayOfRepos.length / 4))].map((_dirname, i) => (
+                    {/* Page numbers */}
+                    {[...Array(totalPages)].map((_, i) => (
                         <span 
                             key={i} 
                             onClick={() => selectPageHandler(i + 1)} 
@@ -46,10 +45,10 @@ const UserRepo = (props) => {
                     ))}
 
                     <span 
-                        className={page < Math.ceil(arrayOfRepos.length / 4) ? "" : "pagination_disabled"} 
+                        className={page < totalPages ? "" : "pagination_disabled"} 
                         onClick={() => selectPageHandler(page + 1)}
                     >
-                        <button className="next"> Next &raquo;</button>
+                        <button className="next">Next &raquo;</button>
                     </span>
                 </div>
             )}
